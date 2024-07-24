@@ -1,0 +1,32 @@
+public class GradeAnalyzer {
+    public static void main(String[] args) {
+        
+        int[] grades = {88, 76, 90, 85, 92, 78, 84, 73, 89, 91};
+
+        
+        int sum = 0;
+        for (int grade : grades) {
+            sum += grade;
+        }
+        double averageGrade = (double) sum / grades.length;
+
+        int highestGrade = grades[0];
+        int lowestGrade = grades[0];
+        for (int grade : grades) {
+            if (grade > highestGrade) {
+                highestGrade = grade;
+            }
+            if (grade < lowestGrade) {
+                lowestGrade = grade;
+            }
+        }
+        System.out.println("Grades: ");
+        for (int grade : grades) {
+            System.out.print(grade + " ");
+        }
+        System.out.println();
+        System.out.println("Average Grade: " + averageGrade);
+        System.out.println("Highest Grade: " + highestGrade);
+        System.out.println("Lowest Grade: " + lowestGrade);
+    }
+}
